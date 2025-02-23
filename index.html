@@ -1,1 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sen Liu Info</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+        }
+
+
+        .language-switch {
+            cursor: pointer;
+            padding: 5px 10px;
+            margin: 5px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        .profile-image {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin: 20px auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .profile-photo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .profile-description {
+            margin: 0;
+        }
+
+        /* 新闻栏目样式 */
+        .news {
+            margin-top: 40px;
+        }
+
+        .news h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+
+        .news-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .news-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        /* 高亮新闻样式 */
+        .highlighted {
+            background-color: #ffd700; /* 浅金色背景 */
+            color: #333;
+            font-weight: bold;
+        }
+
+        .profile {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .research-areas {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .publications {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .awards {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <button class="language-switch" onclick="switchLanguage('zh')">中文</button>
+        <button class="language-switch" onclick="switchLanguage('en')">English</button>
+    </nav>
+
+    <div class="container">
+        <section class="content visible" id="zh">
+
+        <nav>
+            <a href="#about">主页</a> |
+            <a href="#news">最新资讯</a>|
+            <a href="#awards">获得奖项</a> |
+            <a href="#publications">学术论文</a>|
+        </nav>
+
+
+            <section class="profile" id="about">
+                <h2>个人简介</h2>
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <img src="./src/senliu.png" alt="个人照片" class="profile-image">
+                   <p>
+                        <span style="font-size: 24px;">刘森 青年副研究员</span><br>
+                        <span style="font-size: 12px;">复旦大学 金融科技研究院/计算机学院</span><br>
+                        <br>
+                        我的研究方向主要集中在分布式机器学习、金融科技与安全、计算机网络。目前，研究成果共撰写了40余篇论文，分别发表在SIGCOMM、EuroSys、AAAI、TON、INFOCOM等国际顶级学术期刊和会议上；共申请13项专利，获得3项专利授权。作为主要作者编写专著1部。本人现担任科技部“十四五”国家重点研发计划课题、国家自然科学基金、广东省重点领域研发计划课题、云南省重大科技专项等6项国家/省部级项目，主持项目总经费超600万元。本人现担任中国计算机学会互联网专委会执行委员、数字金融分会执行委员、ACM SIGCOMM China专委会委员；获得2022年SIGCOMM中国新星奖，2020年上海市“超级博士后”激励计划；本人担任包括TON、INFOCOM、KDD、TPAMI在内的多项国际顶级期刊及国际顶级会议审稿人和技术方案委员会委员。
+                    </p>
+                </div>
+            </section>
+
+            <section class="research-areas" id="research">
+                <h2>研究方向</h2>
+                <ul>
+                    <li>研究方向 1：分布式机器学习训练与推理</li>
+                    <li>研究方向 2：智算中心/数据中心网络性能优化</li>
+                    <li>研究方向 3：金融数据安全和数据挖掘</li>
+                </ul>
+                对分布式系统搭建和底层协议栈优化、表格数据学习和数据生成、时序序列预测、量化交易等方向感兴趣，具有较强动手能力的同学，可以把自己的CV发送到邮箱senliu@fudan.edu.cn。
+            </section>
+
+            <!-- 添加到其他栏目之后 -->
+            <section class="news" id="news">
+                <h2>最新资讯</h2>
+                <ul class="news-list">
+                    <li class="news-item ">
+                        <strong>JAN 2025:</strong> NetJIT is accepted by SIGMETRICS 2025!
+                    </li>
+                    <li class="news-item ">
+                        <strong>JAN 2025:</strong> Sen Liu is now in APNet 2025 Organization Committee (learn more <a href="https://conferences.sigcomm.org/events/apnet2025/">here</a>)
+                    </li>
+                </ul>
+            </section>
+
+            <section class="awards" id="awards">
+                <h2>获得奖项</h2>
+                <ul class="award-list">
+                    <li class="award-item">
+                        2024年度上海开源创新卓越成果奖特等奖，上海开源信息技术协会，2024
+                    </li>
+                    <li class="award-item">
+                        IWQoS最佳论文提名，IEEE/ACM IWQoS，2024
+                    </li>
+                    <li class="award-item">
+                        ICPP最佳论文提名，ACM ICPP，2023
+                    </li>
+                    <li class="award-item">
+                        ACM SIGCOMM中国新星奖，ACM SIGCOMM China，2022
+                    </li>
+                </ul>
+            </section>
+
+            <section class="publications" id="publications">
+                <h2>论文列表</h2>
+                <ol class="pub-list" type="1">
+                    <li class="pub-item">
+                        Xin Ai#, Zijian Li#, Yuanyi Zhu, Zixuan Chen, Sen Liu, and Yang Xu, NetJIT: Bridging the Gap from Traffic Prediction to Preknowledge for Distributed Machine Learning, ACM SIGMETRICS , (2025)
+                    </li>
+                    <li class="pub-item">
+                        Zhiyu Zhang, Shili Chen, Ruyi Yao, Ruoshi Sun, Hao Mei, Hao Wang, Zixuan Chen, Gaojian Fang, Yibo Fan, Wanxin Shi, Sen Liu & Yang Xu, vPIFO: Virtualized Packet Scheduler for Programmable Hierarchical Scheduling in High-Speed Networks, ACM SIGCOMM , (2024)
+                    </li>
+                    <li class="pub-item">
+                        Zixuan Chen, Xuandong Liu, Minglin Li, Yinfan Hu, Hao Mei, Huifeng Xing, Hao Wang, Wanxin Shi, Sen Liu & Yang Xu, Rina: Enhancing Ring-AllReduce with In-network Aggregation in Distributed Model Training, IEEE International Conference on Network Protocols (ICNP) , (2024)
+                    </li>
+                    <li class="pub-item">
+                        Jiale Li, Run Qian, Yandan Tan, Zhixin Li, Luyu Chen, Sen Liu*, Jie Wu, Hongfeng Chai. TabSAL: Synthesizing Tabular data with Small agent Assisted Language models. In Elsevier Knowledge-Based System, 304(2024)112438, 2024.（中科院一区）
+                    </li>
+                    <li class="pub-item">
+                        Zixuan Chen, Yifan Ruan, Sen Liu, Yang Xu. UniFL: Enabling Loss-tolerant Transmission in Federated  Learning. In Proc. ACM Asia Pacific Workshop on Networking (APNET), 2024. （CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Chuhao Chen, Jiarui Ye, Yongbo Gao, Sen Liu, Yang Xu. HF^2T: Host-Based Flowlet Fine-Tuning for RDMA Load Balancing. In Proc. ACM Asia Pacific Workshop on Networking (APNET), 2024. （CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Ruoshi Sun, Hao Mei, Ruyi Yao, Hao Wang, Yiren Zhou, Zixuan Chen, Sen Liu, Yang Xu. TCAMVisor: High-throughput TCAM Virtualization for Multi-tenant Software Defined Networking. In Proc. ACM/IEEE International Symposium on Quality of Service (IWQoS) , 2024. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Xinyi Li, Minglin Li, Xin Ai, Yongbo Gao, Jiang Shao, Zixuan Chen, Sen Liu, Yang Xu. R-PFC: Enhancing RDMA Network With Restricted And Fine-grained PFC. In Proc. ACM/IEEE International Symposium on Quality of Service (IWQoS) , 2024. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Huifeng Xing, Yuyan Ding, Huiru Huang, Zixuan Chen, Sen Liu, Zehua Guo, Muath Al-Hasan, Mohamed Adel Serhani, Yang Xu. Hierarchical Sketch: An Efficient, Scalable and Latency-aware Content Caching Design for Content Delivery Networks. In Proc. ACM/IEEE International Symposium on Quality of Service (IWQoS) , 2024. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Sen Liu, Yongbo Gao, Zixuan Chen, Jiarui Ye, Haiyang Xu, Furong Liang, Wei Yan, Zerui Tian, Quanwei Sun, Zehua Guo, Yang Xu*. Halflife: An Adaptive Flowlet-based Load Balancer with Fading Timeout in Data Center Networks. In Proc. ACM the Eighteenth European Conference on Computer Systems (EuroSys), 2024.（CCF A类会议）
+                    </li>
+                    <li class="pub-item">
+                        Hongjie Xia, Huijie Ao, Long Li, Yu Liu, Sen Liu, Guangnan Ye, Hongfeng Chai. CI-STHPAN: Pre-Trained Attention Network for Stock Selection with Channel-Independent Spatio-Temporal Hypergraph. In Proc. Association for the Advancement of Artificial Intelligence (AAAI), 2024. （CCF A类会议）
+                    </li>
+                    <li class="pub-item">
+                        Zijian Li, Zixuan Chen, Yiying Tang, Xin Ai, Yuanyi Zhu, Zhigao Zhao, Jiang Shao, Guowei Liu, Sen Liu, Bin Liu, Yang Xu. MUSE: A Runtime Incrementally Reconfigurable Network Adapting to HPC Real-Time Traffic. In Proc. IEEE International Parallel & Distributed Processing Symposium (IPDPS) , 2024. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Ruyi Yao, Cong Luo, Hao Mei, Chuhao Chen, Wenjun Li, Ying Wan, Sen Liu, Bin Liu, Yang Xu. CoLUE: Collaborative TCAM Update in SDN Switches. In Proc. IEEE Conference on Computer Communications (INFOCOM) ,  2023. （CCF A类会议）
+                    </li>
+                    <li class="pub-item">
+                        Zixuan Chen, Lei Shi, Xuandong Liu, Jiahui Li, Sen Liu, Yang Xu. OSP: Boosting Distributed Model Training with 2-stage Synchronization. In Proc. ACM International Conference on Parallel Processing (ICPP) , 2023. -- Best Paper Nominee （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Peng Hou, Xiaohan Jiang, Zongshan Wang, Sen Liu, Zhihui Lu. Federated Deep Reinforcement Learning-Based Intelligent Dynamic Services in UAV-Assisted MEC. IEEE Internet of Things Journal, 2023. （中科院SCI 一区）
+                    </li>
+                    <li class="pub-item">
+                        Weihe Li, Jiawei Huang, Shiqi Wang, Chuliang Wu, Sen Liu, Jianxin Wang. An Apprenticeship Learning Approach for Adaptive Video Streaming Based on Chunk Quality and User Preference. IEEE Transactions on Multimedia, 2023. （中科院SCI 一区）
+                    </li>
+                    <li class="pub-item">
+                        Zixuan Chen, Zhigao Zhao, Zijian Li, Jiang Shao, Sen Liu, Yang Xu. SDT: A Low-cost and Topology-reconfigurable Testbed for Network Research. In Proc. IEEE Cluster, 2023. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Jiang Shao, Minglin Li, Xinyi Li, Guowei Liu, Sen Liu, Bin Liu, Yang Xu. RaceCC: A Rapidly Converging Explicit CongestionControl for Datacenter Networks. Journal of Network and Computer Applications (JNCA), 2023.（中科院SCI 一区）
+                    </li>
+                    <li class="pub-item">
+                        Jiang Shao, Xinyi Li, Minglin Li, Sen Liu, Yang Xu. S-PFC: Enabling Semi-Lossless RDMA Network with Selective Response to PFC. In Proc. IEEE Symposium on Computers and Communications (ISCC) ,  2023. （CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Hao Mei, Ruoshi Sun, Ruyi Yao, Chuhao Chen, Cong Luo, Zixuan Chen, Jiahui Li, Sen Liu, Yang Xu. Rusen: Rule Semantics Enabler toward Fast TCAMUpdate for Commodity SDN Switches. In Proc. IEEE/ACM International Symposium on Quality of Service (IWQoS) , 2023.（CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Zixuan Chen, Lei Shi, Xuandong Liu, Xin Ai, Sen Liu, Yang Xu. Boosting Distributed Machine Learning Training Through Loss-tolerant Transmission Protocol. In Proc. IEEE/ACM International Symposium on Quality of Service (IWQoS) , 2023. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Zehua Guo, Songshi Dou, Sen Liu*, Wendi Feng, Wenchao Jiang, Yang Xu, Zhi-Li Zhang. Maintaining Control Resiliency and Flow Programmability in Software-Defined WANs During Controller Failures, IEEE/ACM Transactions on Networking (TON)，2022.（CCF A类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Ruiyi Yao, Zhiyu Zhang, Gaojian Fang, Peixuan Gao, Sen Liu, Yibo Fan, Yang Xu*, H.Jonathan Chao. BMW Tree: Large-scale, High-throughput and Modular PIFO Implementation using Balanced Multi-Way Sorting Tree. In Proc. ACM SIGCOMM 2023 Conference, 2023. （CCF A类会议）
+                    </li>
+                    <li class="pub-item">
+                        Jiaxin Tang#, Sen Liu#, Yang Xu*, Zehua Guo, Junjie Zhang, Peixuan Gao, Yang Chen, Xin Wang, H. Jonathan Chao. ABS: Adaptive Buffer Sizing via Augmented Programmability with Machine Learning. In Proc. IEEE International Conference on Computer Communications (INFOCOM), 2022.（CCF A类会议）
+                    </li>
+                    <li class="pub-item">
+                        Sen Liu, Furong Liang, Wei Yan, Zehua Guo, Xiang Lin, and Yang Xu*. ERA: Meeting the Fairness between Sender-driven and Receiver-driven Transmission Protocols in Data Center Networks, in Proc. IEEE International Conference on Distributed Computing Systems (ICDCS), 2022. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Zehua Guo*, Jiayu Wang, Sen Liu, Jineng Ren, Yang Xu, Yi Wang. SpongeTraining: Achieving High Efficiency and Accuracy for Wireless Edge-assisted Online Distributed Learning, IEEE Transactions on Mobile Computing, 2022.（CCF A类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Jiawei Huang, Jingling Liu, Ning Jiang, Sen Liu, Jinbin Hu, Jianxin Wang. Achieving Fast Convergence and High Efficiency Using Differential Explicit Feedback in Data Center, IEEE Transactions on Cloud Computing, 2022. （中科院SCI 二区）
+                    </li>
+                    <li class="pub-item">
+                        Zehua Guo*, Jiayu Wang, Sen Liu, Jineng Ren, Yang Xu, Chao Yao. Congestion-aware Critical Gradient Scheduling for Distributed Machine Learning in Data Center Networks, IEEE Transactions on Cloud Computing, 2022. （中科院SCI 二区）
+                    </li>
+                    <li class="pub-item">
+                        Cong Luo, Chuhao Chen, Hao Mei, Ruyi Yao, Ying Wan, Wenjun Li, Sen Liu, Bin Liu, Yang Xu*. BubbleTCAM: Bubble Reservation in SDN Switches for Fast TCAM Update, in Proc. IEEE/ACM International Symposium on Quality of Service (IWQoS), 2022. （CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Weihe Li, Jiawei Huang, Shiqi Wang, Chuliang Wu, Sen Liu, Jianxin Wang. An Apprenticeship Learning Approach for Adaptive Video Streaming Based on Chunk Quality and User Preference, IEEE Transactions on Multimedia, 2022. （CCF B类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Jin Ye, Lin Li, Zihan Chen, Guihao Chen, Sen Liu, Jiawei Huang*, Jianxin Wang, Tian He. ECN-based shared bottleneck detection for multi-path TCP, Elsevier Computer Communications, 2022. （CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Sen Liu, Xiang Lin, Zehua Guo, Yi Wang, Mohamed Adel Serhani, Yang Xu*. Optimizing Flow Completion Time via Adaptive Buffer Management in Data Center Networks, in Proc. ACM International Conference on Parallel Processing (ICPP), 2021.（CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Kuan-Yin Chen#, Sen Liu#, Yang Xu*, Ishant Kumar Siddhrau, Siyu Zhou, Zehua Guo, H. Jonathan Chao. SDNShield: NFV-Based Defense Framework Against DDoS Attacks on SDN Control Plane, IEEE/ACM Transactions on Networking (TON), 2021.（CCF A类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Zehua Guo, Yang Xu*, Ya-Feng Liu, Sen Liu, H. Jonathan Chao, Zhi-Li Zhang, and Yuanqing Xia. AggreFlow: Achieving Power Efficiency, Load Balancing, and Quality of Service in Data Center Networks, IEEE/ACM Transactions on Networking (TON), 2021.（CCF A类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Jiayu Wang, Peng Liu, Zehua Guo*, Sen Liu, Chao Yao. Exploring the Impact of Attacks on Ring AllReduce, in Proc. ACM Asia-Pacific Workshop on Networking (APNet), 2021.（Poster）
+                    </li>
+                    <li class="pub-item">
+                        Zehua Guo, Songshi Dou, Yi Wang*, Sen Liu, Wendi Feng, Yang Xu*. HybridFlow: Achieving Load Balancing in Software-Defined WANs with Scalable Routing, IEEE Transactions on Communications, 2021. （CCF B类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Jiawei Huang, Qichen Su, Weihe Li, Zhuoran Liu, Tao Zhang, Sen Liu, Ping Zhong, Wanchun Jiang, Jianxin Wang. Opportunistic Transmission for Video Streaming over Wild Internet, ACM Transactions on Multimedia Computing Communications and Applications, 2021.（中科院SCI 二区）
+                    </li>
+                    <li class="pub-item">
+                        Sen Liu, Jiawei Huang*, Wenchao Jiang, Jianxin Wang. Reducing traffic burstiness for MPTCP in data center networks, Journal of Network and Computer Applications (JNCA), 2021. （中科院SCI 一区）
+                    </li>
+                    <li class="pub-item">
+                        闫威，刘森，梁富荣，李子健，汪漪，徐扬.数据中心网络中接收端驱动的传输控制协议研究进展. 鹏城实验室通讯, 2021.（特邀论文）
+                    </li>
+                    <li class="pub-item">
+                        Zehua Guo, Sen Liu* and Zhi-Li Zhang. Traffic Control for RDMA-enabled Data Center Networks: A Survey, IEEE Systems Journal, 2020, 14(1):677-688.（中科院SCI 一区）
+                    </li>
+                    <li class="pub-item">
+                        Weihe Li, Jiawei Huang, Shiqi Wang, Sen Liu, Jianxin Wang. DAVS: Dynamic-Chunk Quality Aware Adaptive Video Streaming using Apprenticeship Learning, in Proc. IEEE Global Communications Conference (GLOBECOM), 2020.（CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Ning Jiang, Jiawei Huang, Sen Liu, Jinbin Hu, Jianxin Wang. Achieving Fast Convergence and High Efficiency using Differential Explicit Feedback in Data Center, in Proc. IEEE International Conference on Communications (ICC), 2020.（CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Jiayu Wang, Zehua Guo*, Sen Liu, Yuanqing Xia. Maintaining Training Efficiency and Accuracy for Edge-assisted Online Federated Learning with ABS, in Proc. IEEE International Conference on Network Protocols (ICNP), 2020.（Poster）
+                    </li>
+                    <li class="pub-item">
+                        Penghao Sun, Zehua Guo*, Sen Liu, Julong Lan, Yuxiang Hu. QoS-aware Flow control for Power-efficient Data Center Networks with Deep Reinforcement Learning, in Proc. IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP), 2020. （CCF B类会议)
+                    </li>
+                    <li class="pub-item">
+                        Penghao Sun, Zehua Guo*, Sen Liu, Julong Lan, Junchao Wang, and Yuxiang Hu. SmartFCT: Improving Power-Efficiency for Data Center Networks with Deep Reinforcement Learning, Elsevier Computer Networks, 2020, vol.179, 107255.（CCF B类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Sen Liu, Jiawei Huang, Wenchao Jiang, Jianxin Wang and Tian He. Reducing Flow Completion Time with Replaceable Encoded Packets in Data Center Networks, in Proc. IEEE International Conference on Distributed Computing Systems (ICDCS), 2019.（CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Sen Liu, Jiawei Huang*, Yutao Zhou, Jianxin Wang and Tian He. Task-aware TCP in data center networks, IEEE/ACM Transactions on Networking (TON), 2019, 27(1): 389-404.（CCF A类期刊，第一作者）
+                    </li>
+                    <li class="pub-item">
+                        Zehua Guo*, Wendi Feng, Sen Liu, Wenchao Jiang, Yang Xu and Zhi-Li Zhang. RetroFlow: Maintaining Control Resiliency and Flow Programmability for Software-Defined WANs, in Proc. IEEE/ACM International Symposium on Quality of Service (IWQoS), 2019.（CCF B类会议）
+                    </li>
+                    <li class="pub-item">
+                        Yang Xu*, Shikhar Shukla, Zehua Guo, Sen Liu, Adrian S.-W. Tam, Kang Xi, H. Jonathan Chao. RAPID: Avoiding TCP Incast Throughput Collapse in Public Clouds with Intelligent Packet Discarding, IEEE Journal on Selected Areas in Communications (JSAC), 2019. （CCF A类期刊）
+                    </li>
+                    <li class="pub-item">
+                        Tao Zhang, Jiawei Huang, Shaojun Zou, Sen Liu, Jinbin Hu, Jingling Liu, Chang Ruan, Jianxin Wang. DDT: Mitigating the Competitiveness Difference of Data Center TCPs, in Proc. ACM Asia-Pacific Workshop on Networking (APNet), 2019.（CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Jin Ye, Renzhang Liu, Ziqi Xie, Luting Feng, and Sen Liu. EMPTCP: an ECN based Approach to Detect Shared Bottleneck in MPTCP, in Proc. IEEE International Conference on Computer Communications and Networks (ICCCN), 2019.（CCF C类会议）
+                    </li>
+                    <li class="pub-item">
+                        Sen Liu, Jiawei Huang, Yutao Zhou, Jianxin Wang and Tian He. Task-aware TCP in data center networks, in Proc. IEEE International Conference on Distributed Computing Systems (ICDCS), 2017.（CCF B类会议，第一作者）
+                    </li>
+                </ol>
+            </section>
+        </section>
+        
+
+        <section class="content" id="en">
+            <h2>Bio</h2>
+            <img src="your-photo.jpg" alt="Personal Photo" class="profile-image">
+            <p>TBA.</p>
+
+            <h3>Research Interests</h3>
+            <ul>
+                <li>TBA</li>
+                <li>TBA</li>
+                <li>TBA</li>
+            </ul>
+
+            <h3>Awards</h3>
+            <ul>
+                <li><strong>Award 1</strong> - TBA</li>
+                <li><strong>Award 2</strong> - TBA</li>
+            </ul>
+
+            <h3>Papers</h3>
+            <ul>
+                <li><a href="#">TBA</a></li>
+                <li><a href="#">TBA</a></li>
+            </ul>
+
+        </section>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.content').forEach(section => {
+                if (section.id === lang) {
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
